@@ -19,7 +19,8 @@ function addProject(project, _){
       console.log(card.querySelector("div"));
       card.querySelector("h5").innerHTML = project['repo'];
       card.querySelector("p").innerHTML = project['description'];
-      card.querySelector("a").href = project['html_url'];
+      card.querySelector("a").href = project['link'];
+      card.querySelector("img").src = "assets/images/" + project['repo'] + ".png";
 
       projects.appendChild(card);
     }
