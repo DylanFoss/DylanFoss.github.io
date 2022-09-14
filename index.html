@@ -1,1 +1,53 @@
-Hello Word
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Projects-Horizontal.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body onload="updateProjects();">
+    <div class="container" id="main">
+        <div class="card" id="profile" style="border-right-style: none;border-right-color: rgb(159,159,159);">
+            <div class="card-body" id="bio-card"><img class="rounded-circle" id="picture" src="https://avatars.githubusercontent.com/u/57671477?v=4">
+                <div id="bio">
+                    <h4 class="text-left text-primary">Dylan Foss</h4>
+                    <h6 class="text-left text-muted mb-2">Computer Science Graduate</h6>
+                    <div id="links"><a class="text-primary" id="link-github" href="https://github.com/DylanFoss"><i class="fa fa-github"></i></a></div>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="text-left card-text" style="padding-right: 15px;">Hi, I'm Dylan, a first-class computer science gradate from the University of East Anglia. *****. See the links on the page to see some projects I have worked on!<br></p>
+            </div>
+        </div>
+        <div class="card" id="projects">
+            <script src = "assets/js/projects.js"></script>
+            <div class="card-body">
+                <h3 class="card-title text-primary">Projects</h3>
+            </div>
+            <div id="project-cards" class="row projects">
+                <template id="project-card-template">
+                    <div class="col-sm-6 project-card">
+                        <div class="row">
+                            <div class="col">
+                                <a><h5 class="name text-muted">Project Name</h5></a>
+                                <p class="description">Project description</p>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquerey-3.6.1.mis.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
