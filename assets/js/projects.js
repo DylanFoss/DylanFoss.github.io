@@ -1,7 +1,7 @@
 var githubUsername = 'DylanFoss'
 
 function updateProjects(){
-  fetch('https://gh-pinned-repos.egoist.sh/?username=' + githubUsername)
+  fetch('https://gh-pinned-repos.egoist.dev/?username=' + githubUsername)
   .then(response => response.json())
   .then(data => {
     data.forEach(addProject);
