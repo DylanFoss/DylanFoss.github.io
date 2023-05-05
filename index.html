@@ -1,54 +1,312 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <title>Dylan Foss</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- linking css file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
 </head>
 
-<body onload="updateProjects();">
-    <div class="container" id="main">
-        <div class="card" id="profile" style="border-right-style: none;border-right-color: rgb(159,159,159);">
-            <div class="card-body" id="bio-card"><img class="rounded-circle" id="picture" src="https://avatars.githubusercontent.com/u/57671477?v=4">
-                <div id="bio">
-                    <h4 class="text-left text-primary">Dylan Foss</h4>
-                    <h6 class="text-left text-muted mb-2">Computer Science Graduate</h6>
-                    <div id="links"><a class="text-primary" id="link-github" href="https://github.com/DylanFoss"><i class="fa fa-github"></i></a><a class="text-primary" id="link-linkedin" href="https://www.linkedin.com/in/dylan-foss-357273250/"><i class="fa fa-linkedin"></i></a></div>
+<body>
+    <nav id="id" class="navbar navbar-expand-lg fixed-top navbarScroll navbarDark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dylan Foss</a>
+            <div class="social-icons navbar mt-1">
+                <a href="https://github.com/DylanFoss" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dylan-foss-357273250/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- main banner -->
+    <section class="bgimage" id="home">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                <h2 class="hero_title">Dylan Foss;</h2>
+                <p class="hero_desc"></p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section-->
+    <section id="about">
+        <div class="container mt-4 pt-4">
+            <h1 class="text-center">About Me</h1>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <img src="https://avatars.githubusercontent.com/u/57671477?v=4" class= "imageAboutPage" alt="">
+                </div>
+
+                <div class="col-lg-8">
+                    <p> 
+                        Hi, I'm Dylan, a first-class computer science graduate.
+                        I enjoy programming and regularly work on small projects for fun, and to further my understanding in topics that pique my interest.
+
+                    </p>
+                    <p>
+                    As of late my projects have been working on simulations in C++ with OpenGL for graphics. I enjoy the challange of optimising these and the research rabbit holes that come from it.
+                    </p>
+
+                    <p>
+                    I also enjoy learning about computer graphics, with my foray into OpenGL requiring me to write thing such as a batch renderer to render these simulations. 
+                    </p>
                 </div>
             </div>
-            <div class="card-body">
-                <p class="text-left card-text" style="padding-right: 15px;">Hi, I'm Dylan, a first-class computer science graudate from the University of East Anglia. I enjoy programming in my spare time, particularly small games and algorithm visualisers. See the links on the page to see some projects I have worked on!<br></p>
-            </div>
-        </div>
-        <div class="card" id="projects">
-            <script src = "assets/js/projects.js"></script>
-            <div class="card-body">
-                <h3 class="card-title text-primary">Projects</h3>
-            </div>
-            <div id="project-cards" class="row projects">
-                <template id="project-card-template">
-                    <div class="col-sm-6 project-card">
-                        <div class="row">
-                            <div class="col">
-                                <div class="project-header">
-                                    <img class="" src="assets\images\fox.png"><a><h5 class="name text-muted">Project Name</h5></a>
-                                </div>
-                                <p class="description">Project description</p>
-                            </div>
+    </section>
+
+    <!-- portfolio section-->
+    <section id="portfolio">
+        <div class="container mt-3">
+            <h1 class="text-center">Portfolio</h1>
+
+                <div class="row py-3">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="card">
+                            <img class="card-img-top pixelImage" src="images/projects/main/Unity-Ecosystem-Simulation.png" alt="Card image" style="width:100%">
                         </div>
                     </div>
-                </template>
+                    <div class="col-md-8 col-sm-8">
+                            <div class="project-header">
+                                <span>
+                                <a href="https://github.com/Callum-A/Unity-Ecosystem-Simulation" target=”_blank”><img class="project-icon" src="images/projects/icons/Unity-Ecosystem-Simulation.png"> <h4 class="name">Unity Ecosystem Simulation</h4></a> 
+                                </span>
+                            </div>
+                            <h5 class="project-brief" >A 2D predator and prey simulation within Unity.</h5>
+                            <p class="project-details">"Experience the vicious rigors of nature from the comfort of your home!"</p>
+                            <p class="project-details">A group project by two friends and myself for our 'Advanced Programing' course at University. A simple Plant/Prey/Predator simulation that takes an inital user defined state (terrain, population, breeding speed etc.). Each 'day' has it's information stored and can be looked over via a graph.</p>
+                            <p class="project-details">I specifically worked on the procedual terrain generation, heatmaps, and optimisting the pathfinding. I also drew the cute little guys in the image.</p>
+                            <div class="list">
+                                <ul><li>Keywords: C#, Unity.</li></ul>
+                            </div>
+                            <div class="social-icons mt-1">
+                                <a href="https://github.com/Callum-A/Unity-Ecosystem-Simulation" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.youtube.com/watch?v=Ed1t9PFz8u8" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="row py-3">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="card">
+                            <img class="card-img-top" src="images/projects/main/Boids-ECS.png" alt="Card image" style="width:100%">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-8">
+                            <div class="project-header">
+                                <span>
+                                <img class="project-icon" src="images/projects/icons/Boids-ECS.png"> <h4 class="name">Boids, with ECS</h4>
+                                </span>
+                            </div>
+                            <h5 class="project-brief" >A boids flocking simulation, alongside a home rolled Entity-Component-System.</h5>
+                            <p class="project-details"> The classic boid flocking algorithm, made to attempt an implementation but also to work alognide my ECS implementation.
+                                Currently works well up to 5,000 boids, having a ~6 ms frame time. With further profiling, tuning the grid space patition and using aproximate trig functions should push this a fair bit more forward.
+                            </p>
+                            <p class="project-details"> 
+                            Since this simulation requires the transformation of similar data constantly, data-orientated ideas are applicable allow for both more performant code and a nicer organisational
+                            structure to work with.
+                            </p>
+                            <p class="project-details">
+                            GitHub links soon!
+                            </p>
+                            <div class="list">
+                                <ul><li>Keywords: C++, OpengGL.</li></ul>
+                            </div>
+                            <div class="social-icons mt-1">
+                                <a href="https://www.youtube.com/watch?v=wC7to_ZJLoE" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="row py-3">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="card">
+                            <img class="card-img-top" src="images/projects/main/Procedual-Animation-Using-Inverse-Kinematics.png" alt="Card image" style="width:100%">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-8">
+                            <div class="project-header">
+                                <span>
+                                <a href="https://github.com/DylanFoss/Procedual-Animation-Using-Inverse-Kinematics" target=”_blank”><img class="project-icon" src="images/projects/icons/Procedual-Animation-Using-Inverse-Kinematics.png"> <h4 class="name">Procedual Animation using Inverse Kinematics</h4></a> 
+                                </span>
+                            </div>
+                            <h5 class="project-brief" >Procedual Animation of multilegged creatures using the FABRIK algorithm.</h5>
+                            <p class="project-details">My undergraduate dissertation project. Using the 'Fowards-and-Backwards-Reaching-Inverse-Kinematics' (FABRIK) algorithm  to simulate limb leg placements, and interpolationg them in order to produce a convincing animation. Also has support for 'pole points' which inform the limb what direction to bend towards.</p>
+                            <p class="project-details">Project was very interesting as it required me to get confortable with 3D mathmatics and also to reseach various aspects of computer and traditional animation, and how their application can affect the observers perceptions.</p>
+                            <div class="list">
+                                <ul><li>Keywords: C#, Unity.</li></ul>
+                            </div>
+                            <div class="social-icons mt-1">
+                                <a href="https://github.com/DylanFoss/Procedual-Animation-Using-Inverse-Kinematics" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.youtube.com/watch?v=VSbUW4Ox5rU" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="row py-3">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="card">
+                            <img class="card-img-top" src="images/projects/main/Balls..png" alt="Card image" style="width:100%">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-8">
+                            <div class="project-header">
+                                <span>
+                                <a href="https://github.com/DylanFoss/Balls." target=”_blank”><img class="project-icon" src="images/projects/icons/Balls..png"> <h4 class="name">Balls.</h4></a> 
+                                </span>
+                            </div>
+                            <h5 class="project-brief" >An attempt to create a reusable 2D physics solver.</h5>
+                            <p class="project-details"> A foray into 2D physics via creating a solver to use in other projects. Trial and error lead me to take a more data oriented approach that lead to a system more performant, even without optimisation strategies. </p>
+                            <p class="project-details"> I plan to add further features and combine this with my in progress ECS project to create some small physics games to test them out together, and spot any obvious additions. </p>
+                            <div class="list">
+                                <ul><li>Keywords: C++, OpengGL, physics.</li></ul>
+                            </div>
+                            <div class="social-icons mt-1">
+                                <a href="https://github.com/DylanFoss/Balls." target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.youtube.com/watch?v=aLWAK1GmBm4" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="container mt-3">
+
+                    <div class="row py-3">
+                        <div class="col-md-4 col-sm-4">
+                            <div class="card">
+                                <img class="card-img-top" src="images/projects/main/GameOfLifeGLSL.gif" alt="Card image" style="width:100%">
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                                <div class="project-header">
+                                    <span>
+                                    <a href="https://github.com/DylanFoss/GameOfLifeGLSL" target=”_blank”><img class="project-icon" src="images/projects/icons/GameOfLifeGLSL.png"> <h4 class="name">GameOfLifeGLSL</h4></a> 
+                                    </span>
+                                </div>
+                                <h5 class="project-brief" >An implementation of John Conway's Game Of Life using C++ and GLSL.</h5>
+                                <p class="project-details">'John Conway's Game of Life', implemented in OpenGL with C++ and the OpenGL shader language (GLSL).
+                                This project relies on fragment shaders to update state storing textures to simulate each epoch. 
+                                The advantage of this is large numbers of cells can be updated in parallel on the GPU, allowing for large simulations.
+                                </p>
+                                <p class="project-details">
+                                This project allowed me to work with and get comfortable with shaders, and by extension working with the modern OpenGL render pipeline.
+                                </p>
+                                <div class="list">
+                                    <ul><li>Keywords: C++, OpengGL, GLSL, shaders.</li></ul>
+                                </div>
+                                <div class="social-icons mt-1">
+                                    <a href="https://github.com/DylanFoss/GameOfLifeGLSL" target="_blank"><i class="fab fa-github"></i></a>
+                                    <a href="https://www.youtube.com/watch?v=0dnzAxGN9AU&list=PLZklqBhDcRzr9nKKall8Jfe1klIKvTPpb" target="_blank"><i class="fab fa-youtube"></i></a>
+                                </div>
+                        </div>
+                    </div>
+
+                <div class="row py-3">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="card">
+                            <img class="card-img-top" src="images/projects/main/betris.png" alt="Card image" style="width:100%">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-8">
+                            <div class="project-header">
+                                <span>
+                                <a href="https://github.com/DylanFoss/Betris" target=”_blank”><img class="project-icon" src="images/projects/icons/Betris.png"> <h4 class="name">Betris</h4></a> 
+                                </span>
+                            </div>
+                            <h5 class="project-brief" >An Tertis clone using C++ in OpenGL.</h5>
+                            <p class="project-details"> A simple game clone originally started to get comfortable with OpenGL. In the making of this, I played various versions of Tetris and looked up standard rulesets to try and get a relatively close imitation.</p>
+                            <p class="project-details"> The game has features such as using the standardised rotation system, allowing for T-spins; scoring systems that count combos, back-to-backs and T-spins; and a leveling system based on how well you perform. </p>
+                            <div class="list">
+                                <ul><li>Keywords: C++, OpengGL.</li></ul>
+                            </div>
+                            <div class="social-icons mt-1">
+                                <a href="https://github.com/DylanFoss/Betris" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.youtube.com/watch?v=PlB5suEUTrE" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="row py-3">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="card">
+                            <img class="card-img-top" src="images/projects/main/ConsoleLineRaycastEngine.png" alt="Card image" style="width:100%">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-8">
+                            <div class="project-header">
+                                <span>
+                                <a href="https://github.com/DylanFoss/ConsoleLineRaycastEngine" target=”_blank”><img class="project-icon" src="images/projects/icons/ConsoleLineRaycastEngine.png"> <h4 class="name">Console Line Raycaster</h4></a> 
+                                </span>
+                            </div>
+                            <h5 class="project-brief" >An ascii raycaster in the Windows console.</h5>
+                            <p class="project-details"> An attempt of creating a raycaster, using the windows console and ascii characters to display the world. Uses a DDA algorthim improve raycasting performance.</p>
+                            <p class="project-details"> Inspired by games such as Wolfenstein 3D and Ultima Underworld, and was a fun path to look at the technology the developers utilized to get these to run on machines of the time.</p>
+                            <div class="list">
+                                <ul><li>Keywords: C++.</li></ul>
+                            </div>
+                            <div class="social-icons mt-1">
+                                <a href="https://github.com/DylanFoss/ConsoleLineRaycastEngine" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.youtube.com/watch?v=xV7kghiWD5s" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
-    <script src="assets/js/jquerey-3.6.1.mis.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    </section>
+
+    <section id="contact">
+        <div class="container mt-4 pt-4">
+            <h1 class="text-center"> Contact </h1>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                </div>
+
+                <div class="col-lg-8 list">
+                    <ul>
+                    <div class="row ">
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/dylan-foss-357273250/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    </div>
+                    <li>Email: foss.dylan.00@gmail.com <a href="mailto:foss.dylan.00@gmail.com" target="_blank"><i class="fa fab fa-solid fa-envelope"></i></a> </li>
+                    </ul>>
+                </div>
+            </div>
+        </div>>
+    </section>
+
+     <!-- footer section-->
+     <footer id="footer">
+        <div class="container-fluid">
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
 </body>
-
 </html>
-
